@@ -1,0 +1,5 @@
+Ez egy teszt fájl az MCP kapcsolat ellenőrzéséhez.
+Létrehozva: 2025-12-06
+Cél: A GitHub MCP szerver működésének tesztelése
+
+Ha ezt a fájlt látod, akkor az MCP kapcsolat működik!

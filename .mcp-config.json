@@ -1,0 +1,83 @@
+{
+  "project": "wolfgame",
+  "owner": "csokosgeza",
+  "description": "MCP configuration for the WolfGame project",
+  "repository": {
+    "url": "https://github.com/csokosgeza/wolfgame",
+    "defaultBranch": "main",
+    "developmentBranch": "develop"
+  },
+  "mcpServers": {
+    "github": {
+      "description": "GitHub MCP server for repository management",
+      "tools": {
+        "fileManagement": [
+          "get_file_contents",
+          "create_or_update_file",
+          "delete_file"
+        ],
+        "repositoryManagement": [
+          "create_repository",
+          "create_branch",
+          "list_commits",
+          "get_commit"
+        ],
+        "collaboration": [
+          "create_pull_request",
+          "add_issue_comment",
+          "issue_write",
+          "issue_read"
+        ],
+        "search": [
+          "search_code",
+          "search_issues",
+          "search_repositories"
+        ]
+      },
+      "permissions": {
+        "read": true,
+        "write": true,
+        "admin": false
+      }
+    }
+  },
+  "workflows": {
+    "development": {
+      "description": "Standard development workflow",
+      "steps": [
+        "Create feature branch",
+        "Make changes",
+        "Commit changes",
+        "Create pull request",
+        "Review and merge"
+      ]
+    },
+    "bugfix": {
+      "description": "Bug fix workflow",
+      "steps": [
+        "Create bugfix branch",
+        "Fix issue",
+        "Test fix",
+        "Commit changes",
+        "Create pull request",
+        "Review and merge"
+      ]
+    }
+  },
+  "agent": {
+    "role": "developer",
+    "permissions": {
+      "canCreateBranches": true,
+      "canCreatePullRequests": true,
+      "canManageIssues": true,
+      "canWriteToRepository": true
+    },
+    "guidelines": [
+      "Always create descriptive commit messages",
+      "Use feature branches for new functionality",
+      "Test changes before creating pull requests",
+      "Document important decisions in the repository",
+      "Follow the project's coding standards"
+    ]
+  }
+}
